@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class EratosthenesPrimeSieve implements PrimeSieve{
@@ -11,34 +12,27 @@ public class EratosthenesPrimeSieve implements PrimeSieve{
     public boolean isPrime(int p) {
         boolean[] array = new boolean[oberGraenze];
 
-        for (int i = 0; i < array.length; i++) {
-            array[i] = true;
-        }
-        for (int i = 2; i < array.length; i++) {
-            for (int j = 2; j < array.length; j++) {
-                array[i * j] = false;
-            }
 
+            return false;
         }
-        return false;
-    }
-       /* for (int i = 2; i < p; i++){
-            if (p%i == 0){
-                return false;
-            }
-        }
-        return true;
-    }*/
+
+
 
     public void printPrimes() {
-        Scanner scanner = new Scanner(System.in);
-
-        int oberGraenze = scanner.nextInt();
-
-        for (int i = 2; i < oberGraenze; i++){
-            if (isPrime(i)){
-                System.out.println(i);
+        int n = 20;
+        ArrayList<Integer> primes = new ArrayList<Integer>();
+        boolean[] isPrime = new boolean[n];
+        for (int i=2; i<n; i++)
+            isPrime[i]=true;
+        for (int i=2; i<n; i++)
+            if (isPrime[i])
+            {
+                primes.add(i);
+                for (int j=i*i; j<n; j+=i)
+                    isPrime[j]=false;
             }
+        for(int i=2; i<primes.size(); i++) {
+            System.out.println(primes.get(i));
         }
     }
 }
