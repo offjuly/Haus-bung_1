@@ -10,7 +10,7 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
     }
 
     public boolean isPrime(int p) {
-        boolean[] array = new boolean[oberGraenze];
+        //boolean[] array = new boolean[oberGraenze];
 
         int zahl = 11;
         boolean isprime = true;
@@ -23,7 +23,7 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
     }
 
         public void printPrimes () {
-            int n = 20;
+            int n = oberGraenze;
             ArrayList<Integer> primes = new ArrayList<Integer>();
             boolean[] isPrime = new boolean[n];
             for (int i = 2; i < n; i++)
@@ -36,6 +36,12 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
                 }
             for (int i = 2; i < primes.size(); i++) {
                 System.out.println(primes.get(i));
+            }
+        }
+
+        public void primeLot(){
+            for (int i = 2; i < oberGraenze; i++) {
+                
             }
         }
     }
