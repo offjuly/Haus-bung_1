@@ -40,8 +40,11 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
         }
 
         public void primeLot(){
-            for (int i = 2; i < oberGraenze; i++) {
-                
+            for (int i = 0; i < oberGraenze/2; i++) {
+                if (isPrime(oberGraenze) == true){
+                    
+                }
             }
+
         }
     }
