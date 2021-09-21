@@ -55,13 +55,17 @@ public class EratosthenesPrimeSieve implements PrimeSieve {
             for (int k = 2; k < oberGraenze; k++) {
                 if (isPrime(oberGraenze) == true){
                     for (int j = 2; j < oberGraenze; j++) {
-                        if ((k % 2) == 0) {
+
+
                             for (int i = 2; i < oberGraenze; i++) {
-                                if (i + j == k) {
-                                    System.out.println(k + "Summe: " + k + " = " + i + " + " + j);
-                                    
+                                if ((k % 2) == 0) {
+                                    if (i + j == oberGraenze) {
+                                        if (i + j == k) {
+                                            System.out.println(k + "Summe: " + k + " = " + i + " + " + j);
+
+                                        }
+                                    }
                                 }
-                            }
                         }
                     }
                 }
